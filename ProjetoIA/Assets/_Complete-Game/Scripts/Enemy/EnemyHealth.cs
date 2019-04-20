@@ -87,6 +87,7 @@ namespace CompleteProject
             enemyAudio.Play();
 
             StartSinking();
+
         }
 
 
