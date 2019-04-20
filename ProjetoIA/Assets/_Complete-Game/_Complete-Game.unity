@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 153412, guid: 548c56f4bcf4db24b8aa057e9846a005, type: 3}
-  spawnTime: 15
+  enemy: {fileID: 3327983419603718015, guid: 4bddbc532dc6e40498f525e24222f70b, type: 3}
+  spawnTime: 5
   spawnPoints:
   - {fileID: 933997770}
 --- !u!114 &14871710
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 1495175749584491711, guid: 0b9d5ef84bf103b4bb31756b11b32b5f, type: 3}
+  enemy: {fileID: 7769305926810105681, guid: 0b9d5ef84bf103b4bb31756b11b32b5f, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 1725468539}
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 100002, guid: e5171f72421770240bd7c3989fe351e3, type: 3}
+  enemy: {fileID: 6969174405477638840, guid: a27cec9c8804e49468f1b4d979d8312d, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 345275349}
@@ -1060,7 +1060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 345275349}
   m_Layer: 0
-  m_Name: ZomBunnySpawnPoint
+  m_Name: GirlScoutSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1307,7 +1307,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300000, guid: 5b84db49d40ea449aa4f3e3bd229ab5b,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 4fff99673a41e24439d527ad0bd6b569, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 43362d89d3deeca49931577de1a90dcc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2629,7 +2629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 933997770}
   m_Layer: 0
-  m_Name: HellephantSpawnPoint
+  m_Name: ZombieGirlSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3560,7 +3560,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Kills: 0'
 --- !u!222 &1434159496
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3954,7 +3954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725468539}
   m_Layer: 0
-  m_Name: ZomBearSpawnPoint
+  m_Name: MremirehSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3968,7 +3968,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725468538}
   m_LocalRotation: {x: 0, y: 0.8660254, z: 0, w: -0.50000006}
-  m_LocalPosition: {x: 22.5, y: 0, z: 6.96}
+  m_LocalPosition: {x: 22.5, y: 0, z: 15.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

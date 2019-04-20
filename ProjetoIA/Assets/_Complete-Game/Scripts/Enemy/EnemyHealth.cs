@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace CompleteProject
 {
@@ -51,7 +52,7 @@ namespace CompleteProject
                 return;
 
             // Play the hurt sound effect.
-            //enemyAudio.Play ();
+            enemyAudio.Play();
 
             // Reduce the current health by the amount of damage sustained.
             currentHealth -= amount;
@@ -86,10 +87,15 @@ namespace CompleteProject
             enemyAudio.clip = deathClip;
             enemyAudio.Play();
 
-            StartSinking();
+            StartCoroutine(Wait());
 
         }
 
+        IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(1.5f);
+            StartSinking();
+        }
 
         public void StartSinking ()
         {
