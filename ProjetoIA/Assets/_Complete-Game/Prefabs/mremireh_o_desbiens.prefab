@@ -5550,6 +5550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea9a6ed18654d14db02bf0076cfe488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inimigos: {fileID: 1495175749584491700}
 --- !u!114 &1495175749584491709
 MonoBehaviour:
   m_ObjectHideFlags: 0
