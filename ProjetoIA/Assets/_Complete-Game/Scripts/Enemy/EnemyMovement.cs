@@ -38,6 +38,12 @@ namespace CompleteProject
             // If the enemy and the player have health left...
             if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
             {
+                if (ScoreManager.boss)
+                {
+                    nav.SetDestination(player.position);
+                    return;
+                }
+
                 switch (status)
                 {
                     case 0:
