@@ -108,8 +108,24 @@ namespace CompleteProject
             // The enemy should now sink.
             isSinking = true;
 
-            // Increase the score by the enemy's score value.
-            ScoreManager.score += scoreValue;
+            // Verifies which of the enemies was killed
+            if (gameObject.name.Equals("mremireh_o_desbiens(Clone)"))
+            {
+                // Increase the son's kill count
+                ScoreManager.son += scoreValue;
+
+            } else if (gameObject.name.Equals("girlscout_t_masuyama(Clone)"))
+            {
+                // Increase the daughter's kill count
+                ScoreManager.daughter += scoreValue;
+
+            } else
+            {
+                // Increase the mother's kill count
+                ScoreManager.mother += scoreValue;
+            }
+
+
 
             // After 2 seconds destroy the enemy.
             Destroy (gameObject, 2f);

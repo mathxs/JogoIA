@@ -72,7 +72,7 @@ namespace CompleteProject
             // ... set the destination of the nav mesh agent to the player.
             if ((Mathf.Abs(player.position.x - inimigos.position.x) < 5.0) && (Mathf.Abs(player.position.y - inimigos.position.y) < 5.0))
             {
-                Debug.Log("Ataque");
+                //Debug.Log("Ataque");
                 status = 1;
             }
             else
@@ -96,7 +96,7 @@ namespace CompleteProject
             }
             else
             {
-                Debug.Log("Patrol");
+                //Debug.Log("Patrol");
                 status = 0;
             }
 
