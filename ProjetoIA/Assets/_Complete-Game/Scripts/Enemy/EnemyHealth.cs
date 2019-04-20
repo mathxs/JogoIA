@@ -51,7 +51,7 @@ namespace CompleteProject
                 return;
 
             // Play the hurt sound effect.
-            enemyAudio.Play ();
+            //enemyAudio.Play ();
 
             // Reduce the current health by the amount of damage sustained.
             currentHealth -= amount;
@@ -63,7 +63,7 @@ namespace CompleteProject
             hitParticles.Play();
 
             // If the current health is less than or equal to zero...
-            if(currentHealth <= 0)
+            if (currentHealth <= 0)
             {
                 // ... the enemy is dead.
                 Death ();
@@ -84,7 +84,9 @@ namespace CompleteProject
 
             // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
             enemyAudio.clip = deathClip;
-            enemyAudio.Play ();
+            enemyAudio.Play();
+
+            StartSinking();
         }
 
 
@@ -96,13 +98,13 @@ namespace CompleteProject
             // Find the rigidbody component and make it kinematic (since we use Translate to sink the enemy).
             GetComponent <Rigidbody> ().isKinematic = true;
 
-            // The enemy should no sink.
+            // The enemy should now sink.
             isSinking = true;
 
             // Increase the score by the enemy's score value.
             ScoreManager.score += scoreValue;
 
-            // After 2 seconds destory the enemy.
+            // After 2 seconds destroy the enemy.
             Destroy (gameObject, 2f);
         }
     }
