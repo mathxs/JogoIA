@@ -10949,7 +10949,7 @@ MonoBehaviour:
   currentHealth: 0
   sinkSpeed: 2.5
   scoreValue: 1
-  deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
+  deathClip: {fileID: 8300000, guid: 08cbec88502d5e34c83a584dddfe808a, type: 3}
 --- !u!114 &977701096926305725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10986,7 +10986,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 8434b04884c414ac6b468e10945685e6,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 1d4840678e677424b8921716c72397ea, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 03a6ff121b6f78f4a8163e231e58b19e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
