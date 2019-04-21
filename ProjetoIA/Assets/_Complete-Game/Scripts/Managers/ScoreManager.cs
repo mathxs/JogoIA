@@ -11,7 +11,7 @@ namespace CompleteProject
         public static int mother;       // The number of times the mother died.
         public static bool boss;
         public static int life;
-
+        
         Text text;                      // Reference to the Text component.
 
 
@@ -39,7 +39,8 @@ namespace CompleteProject
             }
             if (boss)
             {
-                text.text = string.Format("Life: {0}%", (life / 1000) * 100);
+                Debug.Log(BossHealth.currentHealth);
+                text.text = string.Format("Life: {0}%", (BossHealth.currentHealth/ 1000f) * 100f);
             }
             else
             {
