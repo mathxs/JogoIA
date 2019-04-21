@@ -17,17 +17,10 @@ namespace CompleteProject
             unico = true;
         }
 
-
-        void Spawn ()
+        private void Update()
         {
             // Find a random index between zero and one less than the number of spawn points.
             int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-            // If the player has no health left...
-            if (playerHealth.currentHealth <= 0f)
-            {
-                // ... exit the function.
-                return;
-            }
             if (ScoreManager.boss)
             {
                 if (unico)
@@ -40,8 +33,25 @@ namespace CompleteProject
                     return;
                 }
             }
+        }
+
+        void Spawn ()
+        {
+            // Find a random index between zero and one less than the number of spawn points.
+            int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+            // If the player has no health left...
+            if (playerHealth.currentHealth <= 0f)
+            {
+                // ... exit the function.
+                return;
+            }
+
             // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-            Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+
+            if (unico)
+            {
+                Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+            }
         }
     }
 }

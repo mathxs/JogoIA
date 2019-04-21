@@ -119,7 +119,7 @@ namespace CompleteProject
                 // Increase the daughter's kill count
                 ScoreManager.daughter += scoreValue;
 
-            } else
+            } else if(gameObject.name.Equals("zombiegirl_w_kurniawan(Clone)"))
             {
                 // Increase the mother's kill count
                 ScoreManager.mother += scoreValue;

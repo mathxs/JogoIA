@@ -33,7 +33,7 @@ namespace CompleteProject
         {
             // Set the displayed text to be the word "Kills" followed by the score value.
             //text.text = "Son: " + son + "\tDaughter: " + daughter + "\tMother: " + mother;
-            if(son + daughter + mother >= 10)
+            if(son + daughter + mother >= 1)
             {
                 boss = true;
             }
