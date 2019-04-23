@@ -13,6 +13,8 @@ namespace CompleteProject
         public static int life;
         
         Text text;                      // Reference to the Text component.
+        public Slider bossSlider;
+        public Image img;
 
 
         void Awake ()
@@ -25,7 +27,8 @@ namespace CompleteProject
             daughter = 0;
             mother = 0;
             boss = false;
-            life = 1000;
+            bossSlider.gameObject.SetActive(false);
+            img.enabled = false;
         }
 
         
@@ -40,7 +43,11 @@ namespace CompleteProject
             if (boss)
             {
                 Debug.Log(BossHealth.currentHealth);
-                text.text = string.Format("Life: {0}%", (BossHealth.currentHealth/ 1000f) * 100f);
+                //text.text = string.Format("Life: {0}%", (BossHealth.currentHealth/ 1000f) * 100f);
+                text.enabled = false;
+                img.enabled = true;
+                bossSlider.gameObject.SetActive(true);
+                bossSlider.value = BossHealth.currentHealth;
             }
             else
             {
