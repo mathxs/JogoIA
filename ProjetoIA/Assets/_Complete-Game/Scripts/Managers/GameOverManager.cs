@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace CompleteProject
 {
@@ -26,8 +28,25 @@ namespace CompleteProject
 
             if (BossHealth.currentHealth <= 0 && ScoreManager.boss)
             {
+                // Tell the animator that the game has been completed
+                // Wait for a couple of seconds before ending the game
                 anim.SetTrigger("Win");
+                StartCoroutine(Wait());
+
             }
+        }
+
+        public IEnumerator Wait()
+        {
+            //Wait a couple of seconds to let the animation playout
+            yield return new WaitForSeconds(2f);
+            RestartLevel();
+        }
+
+        public void RestartLevel()
+        {
+            // Reload the level that is currently loaded.
+            SceneManager.LoadScene(0);
         }
     }
 }
