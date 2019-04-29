@@ -87,12 +87,15 @@ namespace CompleteProject
             enemyAudio.clip = deathClip;
             enemyAudio.Play();
 
+            // Wait a couple of seconds before sinking the characters
+            // This is to match with the falling animation
             StartCoroutine(Wait());
 
         }
 
         IEnumerator Wait()
         {
+            // Wait to sync with the animation
             yield return new WaitForSeconds(1.5f);
             StartSinking();
         }

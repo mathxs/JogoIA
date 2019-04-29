@@ -13,8 +13,8 @@ namespace CompleteProject
         public static int life;
         
         Text text;                      // Reference to the Text component.
-        public Slider bossSlider;
-        public Image img;
+        public Slider bossSlider;       // Reference to the Boss slider and to control it's health
+        public Image img;               // Reference to the skull image
 
 
         void Awake ()
@@ -23,6 +23,7 @@ namespace CompleteProject
             text = GetComponent <Text> ();
 
             // Reset the score.
+            // Disable the boss UIs so they won't appear
             son = 0;
             daughter = 0;
             mother = 0;
@@ -42,8 +43,7 @@ namespace CompleteProject
             }
             if (boss)
             {
-                Debug.Log(BossHealth.currentHealth);
-                //text.text = string.Format("Life: {0}%", (BossHealth.currentHealth/ 1000f) * 100f);
+                // When boss is spawned, eliminate current score count and bring up boss health bar
                 text.enabled = false;
                 img.enabled = true;
                 bossSlider.gameObject.SetActive(true);
@@ -51,6 +51,7 @@ namespace CompleteProject
             }
             else
             {
+                // Score to count the number of times the relatives were killed.
                 text.text = string.Format("Son: {0}      Daughter: {1}      Mother: {2}", son, daughter, mother);
             }
         }

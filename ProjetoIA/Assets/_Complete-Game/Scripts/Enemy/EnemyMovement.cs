@@ -38,12 +38,14 @@ namespace CompleteProject
             // If the enemy and the player have health left...
             if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
             {
+                //When boss appears all other spawns will follow player
                 if (ScoreManager.boss)
                 {
                     nav.SetDestination(player.position);
                     return;
                 }
 
+                // AI logic for controlling the bots
                 switch (status)
                 {
                     case 0:

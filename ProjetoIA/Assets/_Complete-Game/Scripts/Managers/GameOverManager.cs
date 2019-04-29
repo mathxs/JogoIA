@@ -38,7 +38,7 @@ namespace CompleteProject
 
         public IEnumerator Wait()
         {
-            //Wait a couple of seconds to let the animation playout
+            // Wait a couple of seconds to let the game completion animation playout
             yield return new WaitForSeconds(2f);
             RestartLevel();
         }
